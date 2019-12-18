@@ -1,0 +1,18 @@
+@import url('./_size/_xs/button_size_xs.css');
+@import url('./_size/_s/button_size_s.css');
+@import url('./_size/_m/button_size_m.css');
+@import url('./_size/_l/button_size_l.css');
+@import url('./_size/_xl/button_size_xl.css');
+@import url('./_color/_transparent/button_color_transparent.css');
+@import url('./_color/_white/button_color_white.css');
+@import url('./_color/_blue/button_color_blue.css');
+@import url('./__mobile/button__mobile.css');
+@import url('./_invisible/button_invisible.css');
+
+.button {
+    border-radius: 100px;
+    cursor: pointer;
+    box-sizing: border-box;
+    outline: none;
+    transition: .2s ease-in;
+}

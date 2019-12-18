@@ -1,0 +1,9 @@
+.search__description {
+  margin: 32px 0 64px;
+  max-width: 550px;
+
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 24px;
+}

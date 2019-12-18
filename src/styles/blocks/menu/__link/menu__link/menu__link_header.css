@@ -1,0 +1,7 @@
+.menu__link_header {
+  color: #B6BCBF;
+}
+
+.menu__link_header:hover {
+  color: inherit;
+}

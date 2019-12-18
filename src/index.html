@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="author" content="Anton Kuvichka">
+  <meta name="description" content="News search web-site">
+  <title>News-explorer</title>
+  <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.chunks.main.css%>">
+  <link rel="icon" href="<%= require('./images/Favicon.png')%>">
+</head>
+<body>
+  <div class="page">
+
+    <header class="header page__header header_color_white">
+      <div class="header__content page__content">
+        <p class="header__logo">NewsExplorer</p>
+        <nav class="header__menu">
+          <ul class="menu">
+            <li class="menu__item">
+              <a href="./index.html" class="menu__link menu__link_header header__menu_active">Главная</a>
+            </li>
+            <li class="menu__item">
+              <a href="./about.html" class="menu__link menu__link_header">О проекте</a>
+            </li>
+          </ul>
+        </nav>
+        <button id="authorization" class="button button_color_transparent button_size_s">Авторизоваться</button>
+        <button id="exit" class="button button_color_transparent button_size_xs button_invisible">Гретта</button>
+        <button class = "button button__mobile"></button>
+      </div>
+    </header>
+
+    <main>
+
+      <section class="search">
+        <div class="search__content page__content">
+          <h1 class="search__title">Что в&nbsp;мире творится?</h1>
+          <p class="search__description">Находите самые свежие статьи на любую тему
+            и сохраняйте в своём личном кабинете.</p>
+          <form class="search__form" name="searchNews">
+            <input type="text" name="search-input" class="search__input" placeholder="Введите тему новости"
+              maxlength="20" required>
+            <button type="submit" class="button button_color_blue button_size_m search__button">Искать</button>
+            <span class="search__error"></span>
+          </form>
+        </div>
+      </section>
+
+      <section class="search-result">
+        <div class="search-result__content page__content">
+          <i class="search-result__circle"></i>
+          <p class="search-result__text">Идет поиск новостей...</p>
+        </div>
+        <div class="search-result__content page__content">
+          <img src="<%=require('./images/not-found.svg')%>" alt="Ошибка: ничего не найдено" class="search-result__image">
+          <h4 class="search-result__title">Ничего не найдено</h3>
+          <p class="search-result__text">К сожалению по вашему запросу
+            ничего не найдено.</p>
+        </div>
+      </section>
+
+      <section class="card-list">
+        <div class="card-list__content page__content">
+          <h2 class="card-list__title">Результаты поиска</h2>
+          <div class="card-list__container">
+
+            <div class="card">
+              <img src="<%=require('./images/CardBackground.png')%>" alt="Фото новости" class="card__image">
+              <div class="card__content">
+                <time class="card__date" datetime="2019-08-02 00:00">2 августа, 2019</time>
+                <h3 class="card__title">Национальное достояние&nbsp;&mdash; парки</h3>
+                <p class="card__text">В&nbsp;2016 году Америка отмечала важный юбилей: сто лет назад здесь начала
+                  складываться система национальных парков&nbsp;&mdash; охраняемых территорий, где и&nbsp;сегодня
+                  каждый может приобщиться к&nbsp;природе.</p>
+                <p class="card__source">Лента.ру</p>
+                <button class="card__bookmark">
+                  <svg  width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="40" height="40" rx="8" fill="white"/>
+                    <path d="M19.3822 23.7137L14 27.9425V12L26 12V27.9425L20.6178 23.7137L20 23.2283L19.3822 23.7137Z"
+                      stroke="#B6BCBF" stroke-width="2"/>
+                  </svg>
+                </button>
+              </div>
+            </div>
+
+            <div class="card">
+              <img src="<%=require('./images/CardBackground.png')%>" alt="Фото новости" class="card__image">
+              <div class="card__content">
+                <time class="card__date" datetime="2019-08-02 00:00">2 августа, 2019</time>
+                <h3 class="card__title">Национальное достояние&nbsp;&mdash; парки</h3>
+                <p class="card__text">В&nbsp;2016 году Америка отмечала важный юбилей: сто лет назад здесь начала
+                  складываться система национальных парков&nbsp;&mdash; охраняемых территорий, где и&nbsp;сегодня
+                  каждый может приобщиться к&nbsp;природе.</p>
+                <p class="card__source">Лента.ру</p>
+                <button class="card__bookmark">
+                  <svg  width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="40" height="40" rx="8" fill="white"/>
+                    <path d="M19.3822 23.7137L14 27.9425V12L26 12V27.9425L20.6178 23.7137L20 23.2283L19.3822 23.7137Z"
+                      stroke="#B6BCBF" stroke-width="2"/>
+                  </svg>
+                </button>
+              </div>
+            </div>
+
+            <div class="card">
+              <img src="<%=require('./images/CardBackground.png')%>" alt="Фото новости" class="card__image">
+              <div class="card__content">
+                <time class="card__date" datetime="2019-08-02 00:00">2 августа, 2019</time>
+                <h3 class="card__title">Национальное достояние&nbsp;&mdash; парки</h3>
+                <p class="card__text">В&nbsp;2016 году Америка отмечала важный юбилей: сто лет назад здесь начала
+                  складываться система национальных парков&nbsp;&mdash; охраняемых территорий, где и&nbsp;сегодня
+                  каждый может приобщиться к&nbsp;природе.</p>
+                <p class="card__source">Лента.ру</p>
+                <button class="card__bookmark">
+                  <svg  width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="40" height="40" rx="8" fill="white"/>
+                    <path d="M19.3822 23.7137L14 27.9425V12L26 12V27.9425L20.6178 23.7137L20 23.2283L19.3822 23.7137Z"
+                      stroke="#B6BCBF" stroke-width="2"/>
+                  </svg>
+                </button>
+              </div>
+            </div>
+
+          </div>
+          <button type="submit" class="button button_color_white button_size_l card-list__button">Показать ещё</button>
+        </div>
+      </section>
+
+      <section class="about-author page__content">
+        <picture>
+          <img src="<%=require('./images/AuthorPhoto.png')%>" alt="Фото автора" class="about-author__image">
+        </picture>
+        <div class="about-author__description">
+          <h2 class="about-author__title">Об авторе</h3>
+          <p class="about-author__text">Это блок с описаением автора проекта. Здесь следует указать, как вас зовут, чем
+            вы занимаетесь, какими технологиями разработки владете. </p>
+          <p class="about-author__text">Также можно рассказать о процессе обучения в
+            Практикуме, чему вы тут научились, и чем можете помочь потенциальным заказчикам.</p>
+        </div>
+      </section>
+
+      <div id = 'popup-enter' class = "popup popup_is-opened">
+        <div class="popup__content">
+          <img src="<%=require('./images/close.svg')%>" alt="" class="popup__close">
+          <h3 class="popup__title">Войти</h3>
+          <form class="popup__form" name="edit">
+            <div class="input-container">
+              <input id="nameUser" type="text" name="nameUser" required minlength="2" maxlength="30" class="popup__input popup__input_type_name" placeholder="Имя">
+              <span id="error-nameUser" class="error-message error-message__hidden"></span>
+            </div>
+
+            <div class="input-container">
+              <input id="job" type="text" name="job" required  minlength="2" maxlength="30" class="popup__input popup__input_type_link-url" placeholder="Информация о себе">
+              <span id="error-job" class="error-message error-message__hidden"></span>
+            </div>
+              <button type name="save" disabled class="button popup__button popup__button_font-s">Сохранить</button>
+          </form>
+        </div>
+      </div>
+
+    </main>
+
+    <footer class="footer page__content">
+      <span class="footer__copyright">&copy;&nbsp;2019 Supersite</span>
+      <nav class="footer__menu">
+        <ul class="menu menu_footer">
+          <li class="menu__item menu__item_footer">
+            <a href="./index.html" class="menu__link menu__link_footer">Главная</a>
+          </li>
+          <li class="menu__item menu__item_footer">
+            <a href="./about.html" class="menu__link menu__link_footer">О проекте</a>
+          </li>
+          <li class="menu__item menu__item_footer">
+            <a href="https://praktikum.yandex.ru/web-developer"
+            class="menu__link menu__link_footer" target="_blank">Яндекс.Практикум</a></li>
+        </ul>
+      </nav>
+      <div class="footer__social">
+        <a href="https://github.com/risesk/news-frontend" class="footer__social-link" target="_blank">
+          <svg class="footer__social-icon" width="22" height="22" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M11.9998 1.89478C6.41678 1.89478 1.89453 6.42322 1.89453 12C1.89453 16.4665 4.7915 20.2505 8.80507 21.5904C9.30754 21.6835 9.49364 21.3733 9.49364 21.1004C9.49364 20.8584 9.48744 20.2257 9.48123 19.382C6.67111 19.99 6.07559 18.0297 6.07559 18.0297C5.61654 16.8635 4.95278 16.5533 4.95278 16.5533C4.03469 15.9268 5.02102 15.9392 5.02102 15.9392C6.03217 16.0136 6.57186 16.9813 6.57186 16.9813C7.47135 18.526 8.93534 18.0793 9.51225 17.8188C9.6053 17.1674 9.86584 16.7208 10.1512 16.4665C7.90558 16.2121 5.54831 15.3436 5.54831 11.4728C5.54831 10.3686 5.93912 9.46907 6.59047 8.76189C6.48501 8.50755 6.13762 7.47779 6.68972 6.08824C6.68972 6.08824 7.53958 5.8153 9.46882 7.1242C10.2753 6.90088 11.1375 6.78922 11.9998 6.78302C12.8559 6.78922 13.7243 6.90088 14.5308 7.1242C16.46 5.8153 17.3099 6.08824 17.3099 6.08824C17.862 7.47779 17.5146 8.50755 17.4091 8.76189C18.0543 9.46907 18.4451 10.3686 18.4451 11.4728C18.4451 15.3561 16.0816 16.2059 13.8298 16.4602C14.1896 16.7704 14.5184 17.3908 14.5184 18.3337C14.5184 19.686 14.5059 20.7716 14.5059 21.1066C14.5059 21.3795 14.6858 21.6897 15.2007 21.5904C19.2143 20.2505 22.1051 16.4665 22.1051 12.0062C22.1051 6.42322 17.5828 1.89478 11.9998 1.89478Z"
+              fill="#191717"/>
+          </svg>
+        </a>
+        <a href="https://www.facebook.com/" class="footer__social-link" target="_blank">
+          <svg class="footer__social-icon" width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M18.896 0H1.104C.494 0 0 .494 0 1.104v17.793C0 19.506.494 20 1.104 20h9.58v-7.745H8.076V9.237h2.606V7.01c0-2.583 1.578-3.99 3.883-3.99 1.104 0 2.052.082 2.329.119v2.7h-1.598c-1.254 0-1.496.597-1.496 1.47v1.928h2.989l-.39 3.018h-2.6V20h5.098c.608 0 1.102-.494 1.102-1.104V1.104C20 .494 19.506 0 18.896 0z"
+              fill="#000" />
+          </svg>
+        </a>
+      </div>
+    </footer>
+
+  </div>
+
+  <script src="<%=htmlWebpackPlugin.files.chunks.main.entry%>"></script>
+</body>
+</html>

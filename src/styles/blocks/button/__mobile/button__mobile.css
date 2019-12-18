@@ -1,0 +1,16 @@
+.button__mobile {
+    display: none;
+}
+
+@media screen and (max-width: 700px){
+    .button__mobile {
+        display: inline-block;
+        margin-left: auto;
+        /* background-image: url('../../../../public/img/mobile_button.png'); */
+        background-color: transparent;
+        background-size: cover;
+        border: none;
+        width: 22px;
+        height: 20px;
+    }
+}

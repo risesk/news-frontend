@@ -1,0 +1,10 @@
+
+.footer__social-icon:hover > path {
+  fill: #347EFF;
+  transition: 0.2s ease-in;
+}
+
+.footer__social-icon:active > path {
+  fill: #2A65CC;
+  transition: 0.2s ease-in;
+}

@@ -1,0 +1,10 @@
+.menu__item {
+  color: inherit;
+  margin-right: 34px;
+  transition: color .2s ease-in;
+}
+
+.menu__item:last-of-type {
+  margin-right: 32px;
+}
+

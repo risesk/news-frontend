@@ -1,0 +1,20 @@
+.page__content {
+    max-width: 1232px;
+    width: 85.5%;
+    margin: 0px auto;
+    /* position: relative; */
+}
+
+@media screen and (max-width: 768px){
+    .page__content {
+        max-width: 704px;
+        width: 89.5%;
+    }
+}
+
+@media screen and (max-width: 530px){
+    .page__content {
+        max-width: 500px;
+        width: 90%;
+    }
+}
