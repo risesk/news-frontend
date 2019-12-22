@@ -14,3 +14,10 @@
   font-size: 16px;
   line-height: 22px;
 }
+
+@media screen and (max-width: 900px) {
+  .search__input {
+    height: 56px;
+    padding: 17px 0 17px 24px;
+  }
+}

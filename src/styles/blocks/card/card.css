@@ -5,6 +5,8 @@
 @import url('./__text/card__text.css');
 @import url('./__title/card__title.css');
 @import url('./__bookmark/card__bookmark.css');
+@import url('./__hint/card__hint.css');
+@import url('./__key/card__key.css');
 
 .card {
   max-width: 400px;

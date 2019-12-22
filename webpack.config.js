@@ -11,7 +11,7 @@ module.exports = {
   entry: {
     main: './src/scripts/index.js',
     // about: './src/about.js',
-    // saved: './src/saved.js',
+    saved: './src/scripts/saved.js',
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
@@ -27,7 +27,13 @@ module.exports = {
     {
       test: /\.css$/,
       use: [
-        (isDev ? 'style-loader' : MiniCssExtractPlugin.loader),
+        (isDev ? 'style-loader' : {
+          loader: MiniCssExtractPlugin.loader,
+          options:
+            {
+              publicPath: '../',
+            },
+        }),
         'css-loader',
         'postcss-loader',
       ],
@@ -64,24 +70,30 @@ module.exports = {
     new HtmlWebpackPlugin(
       {
         inject: false,
-        hash: true,
+        // hash: true,
         template: './src/index.html',
         filename: 'index.html',
-        chunks: ['main'],
+        // chunks: ['main'],
       },
-      // {
-      //   inject: false,
-      //   hash: true,
-      //   template: './src/pages/about.html',
-      //   filename: 'about.html',
-      // },
-      // {
-      //   inject: false,
-      //   hash: true,
-      //   template: './src/pages/saved.html',
-      //   filename: 'saved.html',
-      // },
     ),
+    new HtmlWebpackPlugin(
+      {
+        inject: false,
+        // hash: true,
+        template: './src/saved.html',
+        filename: 'saved.html',
+        // chunks: ['saved'],
+      },
+    ),
+    // new HtmlWebpackPlugin(
+    //   {
+    //     inject: false,
+    //     hash: true,
+    //     template: './src/pages/about.html',
+    //     filename: 'about.html',
+    //     chunks: ['main'],
+    //   },
+    // ),
     new WebpackMd5Hash(),
     new webpack.DefinePlugin({
       'NODE_ENV': JSON.stringify(process.env.NODE_ENV),

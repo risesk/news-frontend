@@ -1,0 +1,19 @@
+@import url('./__title/info__title.css');
+@import url('./__subtitle/info__subtitle.css');
+@import url('./__keys/info__keys.css');
+
+.info {
+	position: relative;
+	padding-top: 120px;
+}
+
+@media screen and (max-width: 900px) {
+	.info {
+		padding-top: 100px;
+	}
+}
+@media screen and (max-width: 600px) {
+	.info {
+		padding-top: 91px;
+	}
+}

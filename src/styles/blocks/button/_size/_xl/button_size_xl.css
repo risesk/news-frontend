@@ -1,4 +1,11 @@
 .button_size_xl {
-    width: 360px;
-    height: 64px;
+  width: 100%;
+  max-width: 360px;
+  height: 64px;
 }
+
+/* @media screen and (max-width:600px) {
+  .button_size_xl {
+    max-width: 288px;
+  }
+} */

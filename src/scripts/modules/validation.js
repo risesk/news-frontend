@@ -17,20 +17,37 @@ function checkTextInput(element, errorElement) {
   }
 }
 
-function checkUrlInput(element, errorElement) {
+// function checkUrlInput(element, errorElement) {
+//   if (!element.checkValidity()) {
+//     errorElement.textContent = 'Здесь должна быть ссылка';
+//     activateError(errorElement);
+//   }
+// }
+
+function checkEmailInput(element, errorElement) {
   if (!element.checkValidity()) {
-    errorElement.textContent = 'Здесь должна быть ссылка';
+    errorElement.textContent = 'Неправильный формат email';
+    activateError(errorElement);
+  }
+}
+
+function checkPasswordInput(element, errorElement) {
+  if (!element.checkValidity()) {
+    errorElement.textContent = 'Неправильный формат пароля';
     activateError(errorElement);
   }
 }
 
 function validate(element) {
-  const errorElement = document.querySelector(`#error-${element.id}`);
-  if (element.type === 'text') {
-    checkTextInput(element, errorElement);
+  const errorElement = document.querySelector(`#error-${element.name}`);
+  if (element.type === 'email') {
+    checkEmailInput(element, errorElement);
     return false;
-  } if (element.type === 'url') {
-    checkUrlInput(element, errorElement);
+  } if (element.type === 'password') {
+    checkPasswordInput(element, errorElement);
+    return false;
+  } if (element.type === 'text') {
+    checkTextInput(element, errorElement);
     return false;
   }
   return true;
@@ -48,10 +65,10 @@ function checkButton(currentForm) {
 
   if (isValidForm) {
     currentButton.removeAttribute('disabled');
-    currentButton.classList.add('popup__button_is-active');
+    currentButton.classList.add('popup__button');
   } else {
     currentButton.setAttribute('disabled', true);
-    currentButton.classList.remove('popup__button_is-active');
+    currentButton.classList.remove('popup__button');
   }
 }
 

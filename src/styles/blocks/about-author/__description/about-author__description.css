@@ -2,3 +2,9 @@
   max-width: 600px;
   margin-left: 40px;
 }
+
+@media screen and (max-width: 600px) {
+  .about-author__description {
+    margin-left: 0;
+  }
+}

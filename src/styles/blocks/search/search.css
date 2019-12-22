@@ -6,21 +6,22 @@
 @import url('./__button/search__button.css');
 
 .search {
-  min-height: 576px;
+  /* min-height: 576px; */
   background-image: url(../../../images/SearchBackground.png);
   background-size: cover;
   background-repeat: no-repeat;
   color: #fff;
+  background-position: center;
 }
 
-@media screen and (max-width: 900px) {
+/* @media screen and (max-width: 900px) {
   .search {
     min-height: 400px;
   }
 }
 
-@media screen and (max-width: 599px) {
+@media screen and (max-width: 600px) {
   .search {
     min-height: 536px;
   }
-}
+} */

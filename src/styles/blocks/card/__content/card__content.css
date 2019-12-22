@@ -1,3 +1,7 @@
 .card__content {
   padding: 0 24px;
 }
+
+.card__bookmark:hover ~ .card__hint_invisible {
+  display: inline-block;
+}

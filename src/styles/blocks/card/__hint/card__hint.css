@@ -1,0 +1,14 @@
+@import url('./_invisible/card__hint_invisible.css');
+
+.card__hint {
+  position: absolute;
+  top: 24px;
+  right: 69px;
+  margin: 0;
+  font-weight: 500;
+  font-size: 10px;
+  line-height: 12px;
+  border-radius: 10px;
+  padding: 14px 12px;
+  background-color: #fff;
+}

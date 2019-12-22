@@ -1,0 +1,19 @@
+.info__keys {
+	margin: 0;
+	margin-bottom: 56px;
+  color: #1A1B22;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+@media screen and (max-width: 900px) {
+	.info__keys {
+		margin-bottom: 32px;
+    font-size: 14px;
+	}
+}
+@media screen and (max-width: 600px) {
+	.info__keys {
+    font-size: 18px;
+	}
+}
