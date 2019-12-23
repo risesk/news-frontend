@@ -1,7 +1,7 @@
-.header__menu_active {
+.header .header__menu_active {
   border-bottom: 3px solid;
   padding-bottom: 23px;
-  color: #FFF;
+  /* color: inherit; */
 }
 
 @media screen and (max-width: 900px) {
@@ -11,7 +11,7 @@
 }
 
 @media screen and (max-width: 700px) {
-  .menu__link_header {
+  .header .header__menu_active {
     border: none;
   }
 }

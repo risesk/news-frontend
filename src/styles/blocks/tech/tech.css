@@ -1,0 +1,23 @@
+@import url('./__title/tech__title.css');
+@import url('./__label/tech__label.css');
+@import url('./__container/tech__container.css');
+@import url('./__card/tech__card.css');
+@import url('./__content/tech__content.css');
+
+.tech {
+  padding: 80px 0 100px;
+  background-color: #F5F6F7;
+
+}
+
+@media screen and (max-width: 900px){
+  .tech {
+    padding: 40px 0 50px;
+  }
+}
+
+@media screen and (max-width: 700px){
+  .tech {
+    padding-bottom: 10px;
+  }
+}

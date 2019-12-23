@@ -10,7 +10,7 @@ const isDev = process.env.NODE_ENV === 'development';
 module.exports = {
   entry: {
     main: './src/scripts/index.js',
-    // about: './src/about.js',
+    about: './src/scripts/about.js',
     saved: './src/scripts/saved.js',
   },
   output: {
@@ -85,15 +85,15 @@ module.exports = {
         // chunks: ['saved'],
       },
     ),
-    // new HtmlWebpackPlugin(
-    //   {
-    //     inject: false,
-    //     hash: true,
-    //     template: './src/pages/about.html',
-    //     filename: 'about.html',
-    //     chunks: ['main'],
-    //   },
-    // ),
+    new HtmlWebpackPlugin(
+      {
+        inject: false,
+        // hash: true,
+        template: './src/about.html',
+        filename: 'about.html',
+        // chunks: ['main'],
+      },
+    ),
     new WebpackMd5Hash(),
     new webpack.DefinePlugin({
       'NODE_ENV': JSON.stringify(process.env.NODE_ENV),

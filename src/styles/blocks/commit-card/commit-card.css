@@ -1,0 +1,20 @@
+@import url('./__author/commit-card__author.css');
+@import url('./__avatar/commit-card__avatar.css');
+@import url('./__date/commit-card__date.css');
+@import url('./__mail/commit-card__mail.css');
+@import url('./__name/commit-card__name.css');
+@import url('./__text/commit-card__text.css');
+
+
+.commit-card {
+  height: 240px;
+  background: #FFFFFF;
+  border-radius: 16px;
+  padding: 24px;
+}
+
+@media screen and (max-width: 900px) {
+  .commit-card {
+      height: 210px;
+  }
+}

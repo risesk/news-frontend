@@ -1,9 +1,9 @@
 @import url('../vendors/normalize.css');
 @import url('../vendors/fonts/fonts.css');
-@import url('../styles/blocks/menu/menu.css');
-@import url('../styles/blocks/header/header.css');
 @import url('../styles/blocks/page/page.css');
 @import url('../styles/blocks/button/button.css');
+@import url('../styles/blocks/menu/menu.css');
+@import url('../styles/blocks/header/header.css');
 @import url('../styles/blocks/search/search.css');
 @import url('../styles/blocks/search-result/search-result.css');
 @import url('../styles/blocks/card-list/card-list.css');
