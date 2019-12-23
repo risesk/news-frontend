@@ -63,7 +63,7 @@
         </div>
         <div class="search-result__content page__content">
           <img src="./images/not-found.svg" alt="Ошибка: ничего не найдено" class="search-result__image">
-          <h4 class="search-result__title">Ничего не найдено</h3>
+          <h3 class="search-result__title">Ничего не найдено</h3>
           <p class="search-result__text">К сожалению по вашему запросу
             ничего не найдено.</p>
         </div>
@@ -144,7 +144,7 @@
           <img src="./images/AuthorPhoto.png" alt="Фото автора" class="about-author__image">
         </picture>
         <div class="about-author__description">
-          <h2 class="about-author__title">Об авторе</h3>
+          <h2 class="about-author__title">Об авторе</h2>
           <p class="about-author__text">Это блок с описаением автора проекта. Здесь следует указать, как вас зовут, чем
             вы занимаетесь, какими технологиями разработки владете. </p>
           <p class="about-author__text">Также можно рассказать о процессе обучения в
@@ -159,15 +159,15 @@
           <form class="popup__form" name="auth">
             <div class="input-container">
               <label for="email" class="popup__label">Email</label>
-              <input type="email" name="email" required minlength="2" maxlength="30" class="popup__input popup__input_type_email" placeholder="Введите почту">
+              <input type="email" id="email" name="email" required minlength="2" maxlength="30" class="popup__input popup__input_type_email" placeholder="Введите почту">
               <span id="error-email" class="error-message error-message__hidden"></span>
             </div>
             <div class="input-container">
               <label for="password" class="popup__label">Пароль</label>
-              <input type="password" name="password" required  minlength="6" maxlength="20" class="popup__input popup__input_type_password" placeholder="Введите пароль">
+              <input type="password" id="password" name="password" required  minlength="6" maxlength="20" class="popup__input popup__input_type_password" placeholder="Введите пароль">
               <span id="error-password" class="error-message error-message__hidden"></span>
             </div>
-              <button type name="enter" disabled class="button button_color_blue button_size_xl popup__button">Войти</button>
+              <button name="enter" disabled class="button button_color_blue button_size_xl popup__button">Войти</button>
           </form>
           <p class="popup__text">или
             <a href="" class="popup__link">Зарегистрироваться</a>
@@ -182,20 +182,20 @@
           <form class="popup__form" name="reg">
             <div class="input-container">
               <label for="email" class="popup__label">Email</label>
-              <input type="email" name="email" required minlength="2" maxlength="30" class="popup__input popup__input_type_email" placeholder="Введите почту">
+              <input type="email" id="email" name="email" required minlength="2" maxlength="30" class="popup__input popup__input_type_email" placeholder="Введите почту">
               <span id="error-email" class="error-message error-message__hidden"></span>
             </div>
             <div class="input-container">
               <label for="password" class="popup__label">Пароль</label>
-              <input type="password" name="password" required  minlength="6" maxlength="20" class="popup__input popup__input_type_password" placeholder="Введите пароль">
+              <input type="password" id="password" name="password" required  minlength="6" maxlength="20" class="popup__input popup__input_type_password" placeholder="Введите пароль">
               <span id="error-password" class="error-message error-message__hidden"></span>
             </div>
             <div class="input-container">
               <label for="userNname" class="popup__label">Имя</label>
-              <input type="text" name="userNname" required  minlength="4" maxlength="20" class="popup__input popup__input_type_name" placeholder="Введите свое имя">
+              <input type="text" id="userNname" name="userNname" required  minlength="4" maxlength="20" class="popup__input popup__input_type_name" placeholder="Введите свое имя">
               <span id="error-userNname" class="error-message error-message__hidden"></span>
             </div>
-              <button type name="reg" disabled class="button button_color_blue button_size_xl">Зарегистрироваться</button>
+              <button name="reg" disabled class="button button_color_blue button_size_xl">Зарегистрироваться</button>
           </form>
           <p class="popup__text">или
             <a href="" class="popup__link">Войти</a>
