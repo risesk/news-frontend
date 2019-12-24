@@ -1,0 +1,17 @@
+.header .header__menu_active {
+  border-bottom: 3px solid;
+  padding-bottom: 23px;
+  /* color: inherit; */
+}
+
+@media screen and (max-width: 900px) {
+  .header__menu_active {
+    padding-bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .header .header__menu_active {
+    border: none;
+  }
+}

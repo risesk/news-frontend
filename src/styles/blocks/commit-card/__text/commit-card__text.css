@@ -1,0 +1,10 @@
+.commit-card__text {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 22px;
+
+    color: #1A1B22;
+
+    margin-top: 30px;
+}

@@ -1,0 +1,32 @@
+@import url('./__image/card__image.css');
+@import url('./__content/card__content.css');
+@import url('./__date/card__date.css');
+@import url('./__source/card__source.css');
+@import url('./__text/card__text.css');
+@import url('./__title/card__title.css');
+@import url('./__bookmark/card__bookmark.css');
+@import url('./__hint/card__hint.css');
+@import url('./__key/card__key.css');
+
+.card {
+  max-width: 400px;
+  padding-bottom: 64px;
+  display: block;
+  position: relative;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+/* @media screen and (max-width: 900px) {
+  .card-list__container {
+    margin-top: 32px;
+    grid-template-columns: 1fr 1fr;
+  }
+} */
+
+@media screen and (max-width: 600px) {
+  .card {
+   justify-self: center;
+  }
+}

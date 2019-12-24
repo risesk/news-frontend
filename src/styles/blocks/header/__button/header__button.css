@@ -1,0 +1,18 @@
+.header__button {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 125px;
+    width: 244px;
+}
+
+@media screen and (max-width: 1000px) {
+    .header__button {
+        margin-left: 61px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .header__button {
+        display: none;
+    }
+}

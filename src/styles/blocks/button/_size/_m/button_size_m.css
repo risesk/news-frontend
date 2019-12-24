@@ -1,0 +1,12 @@
+.button_size_m {
+    width: 168px;
+    height: 64px;
+    font-size: 18px;
+  line-height: 24px;
+}
+
+@media screen and (max-width: 900px) {
+  .button_size_m {
+    height: 56px;
+  }
+}

@@ -1,0 +1,37 @@
+@import url('./_close/button__mobile_close.css');
+
+.button__mobile {
+  display: none;
+}
+
+@media screen and (max-width: 700px){
+  .button__mobile {
+    display: inline-block;
+    position: relative;
+    margin-left: auto;
+    background-color: transparent;
+    border: none;
+    width: 26px;
+    height: 20px;
+  }
+
+  .button__mobile::before,
+  .button__mobile::after {
+  display: block;
+	position: absolute;
+	content: '';
+  width: 16px;
+  height: 2px;
+	background-color:#fff;
+  }
+
+  .button__mobile::before {
+    top: 5px;
+  }
+
+  .button__mobile::after {
+    top: 11px;
+  }
+
+}
+

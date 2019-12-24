@@ -1,0 +1,22 @@
+.search__title {
+  font-family: 'Robotoslab';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 60px;
+  line-height: 64px;
+  margin: 0;
+}
+
+@media screen and (max-width: 900px) {
+  .search__title{
+    max-width: 385px;
+    font-size: 36px;
+    line-height: 40px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .search__title{
+    max-width: 285px;
+  }
+}

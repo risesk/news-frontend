@@ -1,0 +1,12 @@
+.search-result__text {
+  margin-top: 0;
+  margin-bottom: 0;
+  max-width: 356px;
+  text-align: center;
+
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 24px;
+  color: #B6BCBF;
+}

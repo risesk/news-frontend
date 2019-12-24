@@ -1,0 +1,12 @@
+.search__button {
+  position: absolute;
+  right: 0;
+}
+
+@media screen and (max-width: 600px) {
+  .search__button {
+    margin-top: 16px;
+    position: static;
+    width: 100%;
+  }
+}

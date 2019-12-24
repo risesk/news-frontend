@@ -1,0 +1,6 @@
+@import url('./_is-active/popup__button_is-active.css');
+
+.popup__button {
+  background-color: #E6E8EB;
+  color: #B6BCBF;
+}

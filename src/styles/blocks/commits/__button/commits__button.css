@@ -1,0 +1,20 @@
+.commits__button {
+    display: none;
+}
+
+@media screen and (max-width: 700px) {
+    .commits__button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 24px auto 20px;
+        background: none;
+        color: #1A1B22;
+        border: 1px solid #1A1B22;
+
+    }
+    .commits__button:hover {
+        color: #1A1B22;
+        text-decoration: none;
+    }
+}

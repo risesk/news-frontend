@@ -1,0 +1,20 @@
+.card-list__title {
+  margin: 0;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 40px;
+  line-height: 46px;
+}
+
+@media screen and (max-width: 900px) {
+  .card-list__title {
+    font-size: 30px;
+    line-height: 34px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .card-list__title {
+    max-width: 250px;
+  }
+}

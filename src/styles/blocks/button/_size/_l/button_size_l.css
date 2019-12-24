@@ -1,0 +1,9 @@
+.button_size_l {
+    max-width: 288px;
+    width: 100%;
+    height: 64px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+}

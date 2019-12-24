@@ -1,0 +1,7 @@
+.button_color_black::after,
+.button_color_black::before {
+  color: #000;
+  background-color: #000;
+  /* border: 1px solid #000; */
+}
+

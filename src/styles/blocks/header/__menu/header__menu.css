@@ -1,0 +1,32 @@
+.header__menu {
+  display: flex;
+  align-items: center;
+  margin: 0 0 0 auto;
+  height: 100%;
+  /* color: #B6BCBF; */
+
+}
+
+@media screen and (max-width: 700px) {
+  .header__menu {
+    display: none;
+    flex-direction: column;
+    align-content: center;
+
+    z-index: 2;
+    box-sizing: border-box;
+    position: fixed;
+    top: 50px;
+    left: 0;
+
+    padding: 20px 16px 24px;
+    width: 100%;
+    height: auto;
+    border-width: 0;
+
+    font-size: 18px;
+    line-height: 24px;
+    background-color: #1A1B22;
+    border-radius: 0 0 16px 16px;
+  }
+}

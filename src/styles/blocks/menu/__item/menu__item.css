@@ -1,0 +1,18 @@
+.menu__item {
+  color: inherit;
+  margin-right: 34px;
+  transition: color .2s ease-in;
+}
+
+.menu__item:last-of-type {
+  margin-right: 32px;
+}
+
+@media screen and (max-width: 900px) {
+  .menu__item {
+    margin-right: 16px;
+  }
+  .menu__item:last-of-type {
+    margin-right: 16px;
+  }
+}

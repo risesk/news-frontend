@@ -1,0 +1,9 @@
+.button_color_transparent {
+  color: #FFFFFF;
+  background-color: transparent;
+  border: 1px solid #FFF;
+}
+
+/* .button_color_transparent:hover {
+  border-color: #1A1B22;
+} */

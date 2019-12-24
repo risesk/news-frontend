@@ -1,0 +1,11 @@
+.menu__link_footer {
+  color: #1A1B22;
+}
+
+.menu__link_footer:hover {
+  color: #347EFF;
+}
+
+.menu__link_footer:active {
+  color: #2A65CC;
+}

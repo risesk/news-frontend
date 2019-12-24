@@ -1,0 +1,22 @@
+.card__title {
+  margin: 0 0 16px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 26px;
+  line-height: 30px;
+
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+
+  color:#1a1b22;
+}
+
+@media screen and (max-width: 900px) {
+  .card__title {
+    font-size: 22px;
+    line-height: 24px;
+    margin-bottom: 10px;
+  }
+}

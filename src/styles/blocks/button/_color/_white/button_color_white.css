@@ -1,0 +1,13 @@
+.button_color_white {
+    color: #1A1B22;
+    background-color: #fff;;
+    border: none;
+}
+
+.button_color_white:hover {
+  opacity: 0.8;
+}
+
+/* .button_color_white:active {
+    background-color: #00376E;
+} */

@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="author" content="Anton Kuvichka">
+  <meta name="description" content="News search web-site">
+  <title>News-explorer</title>
+  <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.chunks.about.css%>">
+  <link rel="icon" href="<%= require('./images/Favicon.png')%>">
+</head>
+<body>
+  <div class="page">
+
+    <header class="header page__header">
+      <div class="header__content page__content">
+        <p class="header__logo">NewsExplorer</p>
+        <nav class="header__menu">
+          <ul class="menu menu__header">
+            <li class="menu__item header__menu-item">
+              <a href="./index.html" class="menu__link menu__link_header">Главная</a>
+            </li>
+            <li class="menu__item header__menu-item">
+              <a href="./about.html" class="menu__link header__menu_active">О проекте</a>
+            </li>
+            <li class="menu__item header__menu-item">
+              <a href="./saved.html" class="menu__link menu__link_header">Сохраненные статьи</a>
+            </li>
+          </ul>
+          <button id="authorization" class="button button_color_transparent-black button_size_s">Авторизоваться</button>
+          <button id="exit" class="button button_color_transparent-black button_size_xs button_invisible button__exit">Гретта
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M10 6L6 6L6 18H10V20H6C4.89543 20 4 19.1046 4 18V6C4 4.89543 4.89543 4 6 4H10V6ZM17.5856 13L13.2927 17.1339L14.707 18.4958L21.4141 12.0371L14.707 5.57837L13.2927 6.9402L17.5856 11.0741H8V13H17.5856Z" fill="white" class="header__logout-black"></path>
+          </svg>
+          </button>
+        </nav>
+        <div class="menu__overlay"></div>
+        <button class = "button button__mobile button_color_black"></button>
+      </div>
+    </header>
+
+    <main>
+
+      <section class="clients page__content">
+        <h2 class="clients__title">Клиентам</h2>
+        <div class="clients__container">
+            <p class="clients__text">Этот сайт — дипломный проект студента Яндекс.Практикума. Его цель —
+                показать, чему научился студент, какими технологиями владеет.</p>
+            <p class="clients__text">Вёрстка сайта выполнена по методологии БЭМ. Это делает сайт гибким и
+                масштабируемым. Кроме того, добавлять новые страницы и функциональность проще и быстрее, чем
+                в проектах, выполненных по другим методологиям. Также сайт проще и дешевле поддерживать.</p>
+            <p class="clients__text">Студент самостоятельно написал серверный код. В нём реализована
+                функциональность регистрации и входа в систему. Сайт позволяет искать новости за прошедшую неделю
+                и сохранять понравившиеся в личном кабинете. На сервере избранные новости хранятся в базе
+                данных Mongo DB. Студент запрограммировал надёжный сервер: отказоустойчивый и безопасный.</p>
+            <p class="clients__text">При создании проекта была использована сборка технологией Webpack. Это
+                современный подход к разработке сайтов. Код оптимизируется, а значит, сайт работает быстрее.
+                Также сайт работает в старых браузерах. Даже если посетители — пользователи старых операционных
+                систем, у них не будет проблем с отображением. А значит, потенциальная аудитория возрастает.</p>
+            <p class="clients__text">Проект был проверен экспертами Яндекс.Практикума. Если вашему бизнесу
+                нужен сайт, мы рекомендуем обратиться к этому студенту.</p>
+        </div>
+      </section>
+
+      <section class="tech">
+        <div class="tech__content page__content">
+          <h2 class="tech__title">Используемые технологии</h2>
+          <div class="tech__container">
+            <div class="tech__card">
+                <h3 class="tech__label">HTML</h3>
+                <svg width="88" height="97" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M0 0h88l-7.603 87.532L44 97 7.929 87.532 0 0z" fill="#D1D2D6"></path>
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M22.553 18.145h48.15l-2.265 26.981-1.743 27.394-22.637 5.9-20.98-5.936-1.508-14.231 9.724-1.02.815 7.692 12.054 3.41 13.22-3.445.97-15.255H37.277v-9.73h21.787l1.01-12.031h-37.52v-9.729z" fill="#F5F6F7"></path>
+                </svg>
+            </div>
+            <div class="tech__card">
+                <h3 class="tech__label">CSS</h3>
+                <svg xmlns="http://www.w3.org/2000/svg" width="88" height="97" fill="none">
+                  <defs></defs>
+                  <path fill="#D1D2D6" fill-rule="evenodd" d="M0 0h88l-7.603 87.532L44 97 7.929 87.532 0 0z" clip-rule="evenodd"></path>
+                  <path fill="#F5F6F7" fill-rule="evenodd" d="M18.483 18.158h51.123v9.7H29.071l.97 12.061h38.73l-2.073 32.585-22.639 5.901-20.981-5.936-1.506-14.22 9.724-1.013.816 7.702 12.053 3.41 13.219-3.445.972-15.284H21.011l-2.528-31.46z" clip-rule="evenodd"></path>
+                </svg>
+            </div>
+            <div class="tech__card">
+                <h3 class="tech__label">Java Script</h3>
+                <svg xmlns="http://www.w3.org/2000/svg" width="92" height="92" fill="none">
+                  <defs></defs>
+                  <path fill="#D1D2D6" d="M0 0h92v92H0V0z"></path>
+                  <path fill="#F5F6F7" d="M24.191 76.882l7.04-4.26c1.359 2.408 2.595 4.445 5.558 4.445 2.841 0 4.632-1.111 4.632-5.434V42.237h8.646v29.519c0 8.954-5.249 13.03-12.907 13.03-6.916 0-10.931-3.582-12.969-7.904M54.76 75.954l7.04-4.075c1.853 3.026 4.261 5.249 8.522 5.249 3.583 0 5.867-1.791 5.867-4.261 0-2.965-2.346-4.015-6.299-5.743l-2.16-.927c-6.239-2.655-10.376-5.99-10.376-13.03 0-6.485 4.94-11.425 12.66-11.425 5.496 0 9.449 1.914 12.289 6.916l-6.731 4.323c-1.483-2.655-3.088-3.705-5.558-3.705-2.532 0-4.138 1.606-4.138 3.705 0 2.594 1.606 3.644 5.31 5.25l2.162.926c7.35 3.15 11.487 6.36 11.487 13.586 0 7.782-6.114 12.043-14.327 12.043-8.028 0-13.216-3.829-15.748-8.832"></path>
+                </svg>
+            </div>
+            <div class="tech__card">
+                <h3 class="tech__label">Webpack</h3>
+                <svg xmlns="http://www.w3.org/2000/svg" width="90" height="100" fill="none">
+                  <defs></defs>
+                  <path fill="#D1D2D6" d="M86.83 76.8L46.68 99.51V81.83L71.7 68.07l15.13 8.73zm2.75-2.48v-47.5l-14.68 8.5v30.52l14.68 8.48zM3.01 76.8l40.15 22.71V81.83L18.13 68.07 3.01 76.8zM.26 74.32v-47.5l14.69 8.5v30.52L.26 74.32zM2 23.75L43.16.46v17.1l-26.38 14.5-.21.12-14.58-8.43zm85.87 0L46.68.46v17.1l26.39 14.5.2.11 14.59-8.42zM43.16 77.8L18.47 64.22V37.34L43.16 51.6V77.8zm3.52 0l24.69-13.56v-26.9L46.68 51.6V77.8zM20.14 34.24l24.78-13.62L69.7 34.24l-24.78 14.3-24.78-14.3z"></path>
+                </svg>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="about-author page__content">
+        <picture>
+          <img src="<%=require('./images/AuthorPhoto.png')%>" alt="Фото автора" class="about-author__image">
+        </picture>
+        <div class="about-author__description">
+          <h3 class="about-author__title">Об авторе</h3>
+          <p class="about-author__text">Это блок с описаением автора проекта. Здесь следует указать, как вас зовут, чем
+            вы занимаетесь, какими технологиями разработки владете. </p>
+          <p class="about-author__text">Также можно рассказать о процессе обучения в
+            Практикуме, чему вы тут научились, и чем можете помочь потенциальным заказчикам.</p>
+        </div>
+      </section>
+
+      <section class="commits">
+        <div class="page__content">
+            <div class="commits__container">
+              <h2 class="commits__title">История коммитов из GitHub</h2>
+              <a href="https://github.com/risesk/news-frontend" class="commits__link">Открыть в Github &gt;</a>
+            </div>
+          <div class="commits__swiper">
+              <div class="swiper-container">
+                  <div class="swiper-wrapper">
+
+                    <div class="swiper-slide">
+                        <div class="commit-card">
+                            <time class="commit-card__date" datetime="2019-08-14 00:00">
+                                14 августа, 2019
+                            </time>
+                            <div class="commit-card__author">
+                                    <img src="<%=require('./images/AuthorPhoto.png')%>" alt="AuthorPhoto" class="commit-card__avatar">
+                                <h3 class="commit-card__name">Инга Иванова</h3>
+                                <a href="mailto:ingaiva@yandex.ru" class="commit-card__mail">ingaiva@yandex.ru</a>
+                            </div>
+                            <p class="commit-card__text">
+                                With Emmet, you can type CSS-like expressions that can be dynamically parsed, and produce output depending on what you type in the abb...
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                      <div class="commit-card">
+                          <time class="commit-card__date" datetime="2019-08-14 00:00">
+                              14 августа, 2019
+                          </time>
+                          <div class="commit-card__author">
+                                  <img src="<%=require('./images/AuthorPhoto.png')%>" alt="AuthorPhoto" class="commit-card__avatar">
+                              <h3 class="commit-card__name">Инга Иванова</h3>
+                              <a href="mailto:ingaiva@yandex.ru" class="commit-card__mail">ingaiva@yandex.ru</a>
+                          </div>
+                          <p class="commit-card__text">
+                              With Emmet, you can type CSS-like expressions that can be dynamically parsed, and produce output depending on what you type in the abb...
+                          </p>
+                      </div>
+                  </div>
+
+                  <div class="swiper-slide">
+                    <div class="commit-card">
+                        <time class="commit-card__date" datetime="2019-08-14 00:00">
+                            14 августа, 2019
+                        </time>
+                        <div class="commit-card__author">
+                                <img src="<%=require('./images/AuthorPhoto.png')%>" alt="AuthorPhoto" class="commit-card__avatar">
+                            <h3 class="commit-card__name">Инга Иванова</h3>
+                            <a href="mailto:ingaiva@yandex.ru" class="commit-card__mail">ingaiva@yandex.ru</a>
+                        </div>
+                        <p class="commit-card__text">
+                            With Emmet, you can type CSS-like expressions that can be dynamically parsed, and produce output depending on what you type in the abb...
+                        </p>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                  <div class="commit-card">
+                      <time class="commit-card__date" datetime="2019-08-14 00:00">
+                          14 августа, 2019
+                      </time>
+                      <div class="commit-card__author">
+                              <img src="<%=require('./images/AuthorPhoto.png')%>" alt="AuthorPhoto" class="commit-card__avatar">
+                          <h3 class="commit-card__name">Инга Иванова</h3>
+                          <a href="mailto:ingaiva@yandex.ru" class="commit-card__mail">ingaiva@yandex.ru</a>
+                      </div>
+                      <p class="commit-card__text">
+                          With Emmet, you can type CSS-like expressions that can be dynamically parsed, and produce output depending on what you type in the abb...
+                      </p>
+                  </div>
+              </div>
+
+                  </div>
+              </div>
+              <div class="swiper-button-next"></div>
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-pagination"></div>
+          </div>
+          <button class="button button_size_xl commits__button">Открыть в Github</button>
+      </div>
+    </section>
+
+
+    </main>
+
+    <footer class="footer page__content">
+      <span class="footer__copyright">&copy;&nbsp;2019 Supersite</span>
+      <nav class="footer__menu">
+        <ul class="menu menu__footer">
+          <li class="menu__item footer__menu-item">
+            <a href="./index.html" class="menu__link menu__link_footer">Главная</a>
+          </li>
+          <li class="menu__item footer__menu-item ">
+            <a href="./about.html" class="menu__link menu__link_footer">О проекте</a>
+          </li>
+          <li class="menu__item footer__menu-item">
+            <a href="https://praktikum.yandex.ru/web-developer"
+            class="menu__link menu__link_footer" target="_blank">Яндекс.Практикум</a></li>
+        </ul>
+      </nav>
+      <div class="footer__social">
+        <a href="https://github.com/risesk/news-frontend" class="footer__social-link" target="_blank">
+          <svg class="footer__social-icon" width="22" height="22" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M11.9998 1.89478C6.41678 1.89478 1.89453 6.42322 1.89453 12C1.89453 16.4665 4.7915 20.2505 8.80507 21.5904C9.30754 21.6835 9.49364 21.3733 9.49364 21.1004C9.49364 20.8584 9.48744 20.2257 9.48123 19.382C6.67111 19.99 6.07559 18.0297 6.07559 18.0297C5.61654 16.8635 4.95278 16.5533 4.95278 16.5533C4.03469 15.9268 5.02102 15.9392 5.02102 15.9392C6.03217 16.0136 6.57186 16.9813 6.57186 16.9813C7.47135 18.526 8.93534 18.0793 9.51225 17.8188C9.6053 17.1674 9.86584 16.7208 10.1512 16.4665C7.90558 16.2121 5.54831 15.3436 5.54831 11.4728C5.54831 10.3686 5.93912 9.46907 6.59047 8.76189C6.48501 8.50755 6.13762 7.47779 6.68972 6.08824C6.68972 6.08824 7.53958 5.8153 9.46882 7.1242C10.2753 6.90088 11.1375 6.78922 11.9998 6.78302C12.8559 6.78922 13.7243 6.90088 14.5308 7.1242C16.46 5.8153 17.3099 6.08824 17.3099 6.08824C17.862 7.47779 17.5146 8.50755 17.4091 8.76189C18.0543 9.46907 18.4451 10.3686 18.4451 11.4728C18.4451 15.3561 16.0816 16.2059 13.8298 16.4602C14.1896 16.7704 14.5184 17.3908 14.5184 18.3337C14.5184 19.686 14.5059 20.7716 14.5059 21.1066C14.5059 21.3795 14.6858 21.6897 15.2007 21.5904C19.2143 20.2505 22.1051 16.4665 22.1051 12.0062C22.1051 6.42322 17.5828 1.89478 11.9998 1.89478Z"
+              fill="#191717"/>
+          </svg>
+        </a>
+        <a href="https://www.facebook.com/" class="footer__social-link" target="_blank">
+          <svg class="footer__social-icon" width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M18.896 0H1.104C.494 0 0 .494 0 1.104v17.793C0 19.506.494 20 1.104 20h9.58v-7.745H8.076V9.237h2.606V7.01c0-2.583 1.578-3.99 3.883-3.99 1.104 0 2.052.082 2.329.119v2.7h-1.598c-1.254 0-1.496.597-1.496 1.47v1.928h2.989l-.39 3.018h-2.6V20h5.098c.608 0 1.102-.494 1.102-1.104V1.104C20 .494 19.506 0 18.896 0z"
+              fill="#000" />
+          </svg>
+        </a>
+      </div>
+    </footer>
+
+  </div>
+
+  <script src="<%=htmlWebpackPlugin.files.chunks.about.entry%>"></script>
+</body>
+</html>

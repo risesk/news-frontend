@@ -1,0 +1,9 @@
+@import url('./__content/page__content.css');
+@import url('./__header/page__header.css');
+
+.page {
+    /* max-width: 1440px; */
+    font-family: 'Roboto', 'Robotoslab', Arial, Helvetica, sans-serif;
+    margin: 0 auto;
+    color: #222222;
+}

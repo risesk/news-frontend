@@ -1,0 +1,25 @@
+.card__bookmark{
+  position: absolute;
+  top: 24px;
+  right: 24px;
+
+  padding: 0;
+  outline: none;
+  border: none;
+  font: inherit;
+  color: inherit;
+  background-color: transparent;
+
+  cursor: pointer;
+}
+
+.card__bookmark:hover path {
+  stroke: #1A1B22;
+  transition: 0.2s ease-in;
+}
+
+.card__bookmark:focus path {
+  fill: #2F71E5;
+  stroke: none;
+  transition: 0.2s ease-in;
+}
