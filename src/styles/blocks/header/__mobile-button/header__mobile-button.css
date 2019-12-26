@@ -1,11 +1,15 @@
-@import url('./_close/button__mobile_close.css');
+@import url('./_close/header__mobile-button_close.css');
+@import url('./_color/header__mobile-button_color_black.css');
 
-.button__mobile {
+.header__mobile-button {
   display: none;
+  cursor: pointer;
+  outline: none;
+  transition: all .2s ease-in;
 }
 
 @media screen and (max-width: 700px){
-  .button__mobile {
+  .header__mobile-button {
     display: inline-block;
     position: relative;
     margin-left: auto;
@@ -15,8 +19,8 @@
     height: 20px;
   }
 
-  .button__mobile::before,
-  .button__mobile::after {
+  .header__mobile-button::before,
+  .header__mobile-button::after {
   display: block;
 	position: absolute;
 	content: '';
@@ -25,11 +29,11 @@
 	background-color:#fff;
   }
 
-  .button__mobile::before {
+  .header__mobile-button::before {
     top: 5px;
   }
 
-  .button__mobile::after {
+  .header__mobile-button::after {
     top: 11px;
   }
 

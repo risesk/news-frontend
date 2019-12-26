@@ -5,7 +5,7 @@ const authorizationButton = document.getElementById('authorization');
 
 const popupAuth = document.querySelector('#popup-auth');
 const popupReg = document.querySelector('#popup-reg');
-const mobileBtn = document.querySelector('.button__mobile');
+const mobileBtn = document.querySelector('.header__mobile-button');
 const headerMenu = document.querySelector('.header__menu');
 const header = document.querySelector('.header');
 
@@ -39,12 +39,12 @@ authorizationButton.addEventListener('click', () => {
   popupAuth.querySelector('.popup__link').addEventListener('click', openRegPopup);
   headerMenu.classList.remove('header__menu_is-open');
   header.classList.remove('header_background-color_dark');
-  mobileBtn.classList.remove('button__mobile_close');
+  mobileBtn.classList.remove('header__mobile-button_close');
   mobileBtn.style.display = 'none';
 });
 
 mobileBtn.addEventListener('click', () => {
   headerMenu.classList.toggle('header__menu_is-open');
   header.classList.toggle('header_background-color_dark');
-  mobileBtn.classList.toggle('button__mobile_close');
+  mobileBtn.classList.toggle('header__mobile-button_close');
 });
