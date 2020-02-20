@@ -50,7 +50,13 @@ class NewsCardList extends BaseComponent {
   }
 
   resetMarkup() {
-    this._element.removeChild(this._element.lastChild);
+    while (this._element.lastChild) this._element.removeChild(this._element.lastChild);
+  }
+
+  _resetCardMarkup() {
+    while (this._cardContainerElement.lastChild) {
+      this._cardContainerElement.removeChild(this._cardContainerElement.lastChild);
+    }
   }
 
   reloadMarkup() {
@@ -65,6 +71,7 @@ class NewsCardList extends BaseComponent {
     this._newsCards = cards;
     this._isLoggedIn = isLoggedIn;
     this._keyword = keyword;
+    this._resetCardMarkup();
     this._showMore();
   }
 

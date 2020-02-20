@@ -86,7 +86,6 @@ function searchArticles() {
         return newsCardList.renderError();
       }
       cardsArray = result.articles;
-      console.log(result);
       newsCardList.setNewsCards(cardsArray, isLoggedIn, searchInput.value);
       searchInput.value = '';
       return result;
