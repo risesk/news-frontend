@@ -36,13 +36,12 @@ export default class InfoSection {
     this._keywords = Object.keys(keywords);
   }
 
-  render({ articles = this._articles, username = this._userName }) {
+  render(articles = this._articles, username = this._userName) {
     this._userName = username;
     this._articles = articles;
     this._getKeywords(articles);
     const [firstKeyWord, secondKeyWord, thirdKeyWord] = this._keywords;
     this._renderSubtitle(articles.length);
-    console.log(firstKeyWord);
 
     if (articles.length === 0) this._keys.remove();
     else if (this._keywords.length === 1) {

@@ -10,7 +10,7 @@ import InfoSection from '../js/components/InfoSection';
 
 let isLoggedIn = false;
 let cardsArray = [];
-let userLogin = null;
+let userLogin = '';
 
 const cardTemplate = document.getElementById('news-card-template').content.querySelector('.card');
 const rootElement = document.querySelector('.page');
@@ -69,7 +69,7 @@ function searchArticles() {
   newsCardList.renderLoader();
   mainApi.getArticles()
     .then((result) => {
-      infoSection.render({ articles: result, username: userLogin });
+      infoSection.render(result, userLogin);
       if (result.length > 0) {
         cardsArray = result;
         return newsCardList.setNewsCards(cardsArray, isLoggedIn);
