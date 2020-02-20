@@ -13,7 +13,7 @@ export default class GithubApi {
   getCommits() {
     return fetch(`${this.url}/repos/${this.username}/${this.rep}/commits`, {
       headers: {
-        authorization: `token ${this.token}`,
+        authorization: `${this.token}`,
       },
     })
       .then((res) => GithubApi.getResponseData(res));

@@ -5,8 +5,8 @@ const EMPTY_FIELD = 0;
 const MIN_TEXT_LENGTH = 2;
 const MAX_TEXT_LENGTH = 20;
 
-const MAIN_API_URL = 'https://api.mestoapp.site';
-// const MAIN_API_URL = 'http://localhost:3000';
+// const MAIN_API_URL = 'https://api.mestoapp.site';
+const MAIN_API_URL = 'http://localhost:3000';
 
 const newsApiData = {
   KEY: 'fe4c1bfa9524495bb3034d002fbb03cb',
