@@ -1,4 +1,5 @@
-@import url('../vendors/swiper/swiper.min.css');
+/* @import url('../vendors/swiper/swiper.min.css'); */
+@import url('../../node_modules/swiper/css/swiper.min.css');
 @import url('../vendors/swiper/swiper-mod.css');
 
 @import url('../vendors/normalize.css');
@@ -10,6 +11,15 @@
 @import url('../styles/blocks/clients/clients.css');
 @import url('../styles/blocks/tech/tech.css');
 @import url('../styles/blocks/about-author/about-author.css');
+@import url('../styles/blocks/search-result/search-result.css');
 @import url('../styles/blocks/commit-card/commit-card.css');
 @import url('../styles/blocks/commits/commits.css');
+@import url('../styles/blocks/popup/popup.css');
+@import url('../styles/blocks/error-message/error-message.css');
+@import url('../styles/blocks/input-container/input-container.css');
 @import url('../styles/blocks/footer/footer.css');
+@import url('../styles/blocks/overlay/overlay.css');
+
+.visually-hidden {
+  display: none;
+}

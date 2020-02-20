@@ -13,7 +13,7 @@
 <body>
   <div class="page">
 
-    <header class="header page__header header_color_white ">
+    <header class="header page__header header_color_white">
       <div class="header__content page__content">
         <p class="header__logo">NewsExplorer</p>
         <nav class="header__menu">
@@ -24,18 +24,17 @@
             <li class="menu__item header__menu-item">
               <a href="./about.html" class="menu__link menu__link_header">О проекте</a>
             </li>
-            <li class="menu__item header__menu-item">
+            <li id="savedArticlesLink" class="menu__item header__menu-item">
               <a href="./saved.html" class="menu__link menu__link_header">Сохраненные статьи</a>
             </li>
           </ul>
           <button id="authorization" class="button button_color_transparent button_size_s">Авторизоваться</button>
-          <button id="exit" class="button button_color_transparent button_size_xs button_invisible">Гретта
+          <button id="logout" class="button button_color_transparent button_size_xs"><span class="button__text">Гретта</span>
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path fill-rule="evenodd" clip-rule="evenodd" d="M10 6L6 6L6 18H10V20H6C4.89543 20 4 19.1046 4 18V6C4 4.89543 4.89543 4 6 4H10V6ZM17.5856 13L13.2927 17.1339L14.707 18.4958L21.4141 12.0371L14.707 5.57837L13.2927 6.9402L17.5856 11.0741H8V13H17.5856Z" fill="white" class="header__logout-black"></path>
-          </svg>
+            </svg>
           </button>
         </nav>
-        <div class="menu__overlay"></div>
         <button class = "header__mobile-button"></button>
       </div>
     </header>
@@ -50,94 +49,68 @@
           <form class="search__form" name="searchNews">
             <input type="text" name="search-input" class="search__input" placeholder="Введите тему новости"
               maxlength="20" required>
-            <button type="submit" class="button button_color_blue button_size_m search__button">Искать</button>
+            <button disabled type="submit" name="search-button" class="button button_color_blue button_size_m search__button">Искать</button>
             <span class="search__error"></span>
           </form>
         </div>
       </section>
 
-      <section class="search-result">
-        <div class="search-result__content page__content">
-          <i class="search-result__circle"></i>
-          <p class="search-result__text">Идет поиск новостей...</p>
-        </div>
-        <div class="search-result__content page__content">
-          <img src="<%=require('./images/not-found.svg')%>" alt="Ошибка: ничего не найдено" class="search-result__image">
-          <h3 class="search-result__title">Ничего не найдено</h3>
-          <p class="search-result__text">К сожалению по вашему запросу
-            ничего не найдено.</p>
-        </div>
-      </section>
+        <section id="search-result-template" class="search-result">
 
-      <section class="card-list">
-        <div class="card-list__content page__content">
-          <h2 class="card-list__title">Результаты поиска</h2>
-
-          <div class="card-list__container">
-            <div class="card">
-              <img src="<%=require('./images/CardBackground.png')%>" alt="Фото новости" class="card__image">
-              <div class="card__content">
-                <time class="card__date" datetime="2019-08-02 00:00">2 августа, 2019</time>
-                <h3 class="card__title">Национальное достояние&nbsp;&mdash; парки</h3>
-                <p class="card__text">В&nbsp;2016 году Америка отмечала важный юбилей: сто лет назад здесь начала
-                  складываться система национальных парков&nbsp;&mdash; охраняемых территорий, где и&nbsp;сегодня
-                  каждый может приобщиться к&nbsp;природе.</p>
-                <p class="card__source">Лента.ру</p>
-                <button class="card__bookmark">
-                  <svg  width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <rect width="40" height="40" rx="8" fill="white"/>
-                    <path d="M19.3822 23.7137L14 27.9425V12L26 12V27.9425L20.6178 23.7137L20 23.2283L19.3822 23.7137Z"
-                      stroke="#B6BCBF" stroke-width="2"/>
-                  </svg>
-                </button>
-                <p class="card__hint card__hint_invisible">Войдите, чтобы сохранять статьи</p>
-              </div>
+          <template id="search-loader-template">
+            <div class="search-result__content page__content">
+              <i class="search-result__circle"></i>
+              <p class="search-result__text">Идет поиск новостей...</p>
             </div>
+          </template>
 
-            <div class="card">
-              <img src="<%=require('./images/CardBackground.png')%>" alt="Фото новости" class="card__image">
-              <div class="card__content">
-                <time class="card__date" datetime="2019-08-02 00:00">2 августа, 2019</time>
-                <h3 class="card__title">Национальное достояние&nbsp;&mdash; парки</h3>
-                <p class="card__text">В&nbsp;2016 году Америка отмечала важный юбилей: сто лет назад здесь начала
-                  складываться система национальных парков&nbsp;&mdash; охраняемых территорий, где и&nbsp;сегодня
-                  каждый может приобщиться к&nbsp;природе.</p>
-                <p class="card__source">Лента.ру</p>
-                <button class="card__bookmark">
-                  <svg  width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <rect width="40" height="40" rx="8" fill="white"/>
-                    <path d="M19.3822 23.7137L14 27.9425V12L26 12V27.9425L20.6178 23.7137L20 23.2283L19.3822 23.7137Z"
-                      stroke="#B6BCBF" stroke-width="2"/>
-                  </svg>
-                </button>
-                <p class="card__hint card__hint_invisible">Войдите, чтобы сохранять статьи</p>
-              </div>
+          <template id="search-error-template">
+            <div class="search-result__content page__content">
+              <img src="<%=require('./images/not-found.svg')%>" alt="Ошибка: ничего не найдено" class="search-result__image">
+              <h3 class="search-result__title">Ничего не найдено</h3>
+              <p class="search-result__text">К сожалению по вашему запросу
+                ничего не найдено.</p>
             </div>
+          </template>
 
-            <div class="card">
-              <img src="<%=require('./images/CardBackground.png')%>" alt="Фото новости" class="card__image">
-              <div class="card__content">
-                <time class="card__date" datetime="2019-08-02 00:00">2 августа, 2019</time>
-                <h3 class="card__title">Национальное достояние&nbsp;&mdash; парки</h3>
-                <p class="card__text">В&nbsp;2016 году Америка отмечала важный юбилей: сто лет назад здесь начала
-                  складываться система национальных парков&nbsp;&mdash; охраняемых территорий, где и&nbsp;сегодня
-                  каждый может приобщиться к&nbsp;природе.</p>
-                <p class="card__source">Лента.ру</p>
-                <button class="card__bookmark">
-                  <svg  width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <rect width="40" height="40" rx="8" fill="white"/>
-                    <path d="M19.3822 23.7137L14 27.9425V12L26 12V27.9425L20.6178 23.7137L20 23.2283L19.3822 23.7137Z"
-                      stroke="#B6BCBF" stroke-width="2"/>
-                  </svg>
+          <template id="search-cardList-template">
+            <section class="card-list">
+              <div class="card-list__content page__content">
+                <h2 class="card-list__title">Результаты поиска</h2>
+                <div class="card-list__container">
+
+                </div>
+                <button type="submit"
+                  id="show-more-button"
+                  class="button button_color_white button_size_l card-list__button">Показать ещё
                 </button>
-                <p class="card__hint card__hint_invisible">Войдите, чтобы сохранять статьи</p>
               </div>
-            </div>
+            </section>
+          </template>
+
+        </section>
+
+      <template id="news-card-template">
+        <div class="card">
+          <img src="<%=require('./images/CardBackground.png')%>" alt="Фото новости" class="card__image">
+          <div class="card__content">
+            <time class="card__date" datetime="2019-08-02 00:00">2 августа, 2019</time>
+            <h3 class="card__title">Национальное достояние&nbsp;&mdash; парки</h3>
+            <p class="card__text">В&nbsp;2016 году Америка отмечала важный юбилей: сто лет назад здесь начала
+              складываться система национальных парков&nbsp;&mdash; охраняемых территорий, где и&nbsp;сегодня
+              каждый может приобщиться к&nbsp;природе.</p>
+            <p class="card__source">Лента.ру</p>
           </div>
-
-          <button type="submit" class="button button_color_white button_size_l card-list__button">Показать ещё</button>
+          <button class="card__bookmark">
+            <svg  width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="40" height="40" rx="8" fill="white"/>
+              <path d="M19.3822 23.7137L14 27.9425V12L26 12V27.9425L20.6178 23.7137L20 23.2283L19.3822 23.7137Z"
+                stroke="#B6BCBF" stroke-width="2"/>
+            </svg>
+          </button>
+          <p class="card__hint card__hint_invisible">Войдите, чтобы сохранять статьи</p>
         </div>
-      </section>
+      </template>
 
       <section class="about-author page__content">
         <picture>
@@ -152,56 +125,73 @@
         </div>
       </section>
 
-      <div id = 'popup-auth' class = "popup">
-        <div class="popup__content">
-          <img src="<%=require('./images/close.svg')%>" alt="" class="popup__close">
-          <h3 class="popup__title">Вход</h3>
-          <form class="popup__form" name="auth">
-            <div class="input-container">
-              <label for="email" class="popup__label">Email</label>
-              <input type="email" id="email" name="email" required minlength="2" maxlength="30" class="popup__input popup__input_type_email" placeholder="Введите почту">
-              <span id="error-email" class="error-message error-message__hidden"></span>
-            </div>
-            <div class="input-container">
-              <label for="password" class="popup__label">Пароль</label>
-              <input type="password" id="password" name="password" required  minlength="6" maxlength="20" class="popup__input popup__input_type_password" placeholder="Введите пароль">
-              <span id="error-password" class="error-message error-message__hidden"></span>
-            </div>
-              <button name="enter" disabled class="button button_color_blue button_size_xl popup__button">Войти</button>
-          </form>
-          <p class="popup__text">или
-            <a href="" class="popup__link">Зарегистрироваться</a>
-          </p>
-        </div>
-      </div>
 
-      <div id = 'popup-reg' class = "popup">
-        <div class="popup__content">
-          <img src="<%=require('./images/close.svg')%>" alt="" class="popup__close">
-          <h3 class="popup__title">Регистрация</h3>
-          <form class="popup__form" name="reg">
-            <div class="input-container">
-              <label for="email" class="popup__label">Email</label>
-              <input type="email" id="email" name="email" required minlength="2" maxlength="30" class="popup__input popup__input_type_email" placeholder="Введите почту">
-              <span id="error-email" class="error-message error-message__hidden"></span>
-            </div>
-            <div class="input-container">
-              <label for="password" class="popup__label">Пароль</label>
-              <input type="password" id="password" name="password" required  minlength="6" maxlength="20" class="popup__input popup__input_type_password" placeholder="Введите пароль">
-              <span id="error-password" class="error-message error-message__hidden"></span>
-            </div>
-            <div class="input-container">
-              <label for="userNname" class="popup__label">Имя</label>
-              <input type="text" id="userNname" name="userNname" required  minlength="4" maxlength="20" class="popup__input popup__input_type_name" placeholder="Введите свое имя">
-              <span id="error-userNname" class="error-message error-message__hidden"></span>
-            </div>
-              <button name="reg" disabled class="button button_color_blue button_size_xl">Зарегистрироваться</button>
-          </form>
-          <p class="popup__text">или
-            <a href="" class="popup__link">Войти</a>
-          </p>
+      <template id="popup-auth">
+        <div class = "popup">
+          <div class="popup__content">
+            <img src="<%=require('./images/close.svg')%>" alt="" class="popup__close">
+            <h3 class="popup__title">Вход</h3>
+            <form class="popup__form" name="auth">
+              <div class="input-container">
+                <label for="email" class="popup__label">Email</label>
+                <input type="email" id="email" name="email" required minlength="2" maxlength="20" class="popup__input popup__input_type_email" placeholder="Введите почту">
+                <span for="email" class="error-message error-message_visible"></span>
+              </div>
+              <div class="input-container">
+                <label for="password" class="popup__label">Пароль</label>
+                <input type="password" id="password" name="password" required  minlength="6" maxlength="20" class="popup__input popup__input_type_password" placeholder="Введите пароль">
+                <span for="password" class="error-message error-message_visible"></span>
+              </div>
+              <span id="server-error" class="error-message error-message_visible"></span>
+              <button name="enter" disabled class="button button_color_blue button_size_xl popup__button">Войти</button>
+            </form>
+            <p class="popup__text">или
+              <span class="popup__link">Зарегистрироваться</span>
+            </p>
+          </div>
         </div>
-      </div>
+      </template>
+
+      <template id="popup-reg">
+        <div class = "popup">
+          <div class="popup__content">
+            <img src="<%=require('./images/close.svg')%>" alt="" class="popup__close">
+            <h3 class="popup__title">Регистрация</h3>
+            <form class="popup__form" name="reg">
+              <div class="input-container">
+                <label for="email" class="popup__label">Email</label>
+                <input type="email" id="email" name="email" required minlength="2" maxlength="20" class="popup__input popup__input_type_email" placeholder="Введите почту">
+                <span for="email" class="error-message error-message_visible"></span>
+              </div>
+              <div class="input-container">
+                <label for="password" class="popup__label">Пароль</label>
+                <input type="password" id="password" name="password" required  minlength="6" maxlength="20" class="popup__input popup__input_type_password" placeholder="Введите пароль">
+                <span for="password" class="error-message error-message_visible"></span>
+              </div>
+              <div class="input-container">
+                <label for="name" class="popup__label">Имя</label>
+                <input type="text" id="name" name="name" required  minlength="2" maxlength="20" class="popup__input popup__input_type_name" placeholder="Введите свое имя">
+                <span for="name" class="error-message error-message_visible"></span>
+              </div>
+              <span id="server-error" class="error-message error-message_visible"></span>
+              <button name="reg" disabled class="button button_color_blue button_size_xl popup__button">Зарегистрироваться</button>
+            </form>
+            <p class="popup__text">или
+              <span class="popup__link">Войти</span>
+            </p>
+          </div>
+        </div>
+      </template>
+
+      <template id="popup-signup-success">
+        <div class = "popup">
+          <div class="popup__content">
+            <img src="<%=require('./images/close.svg')%>" alt="" class="popup__close">
+            <h3 class="popup__title">Пользователь успешно зарегистрирован!</h3>
+            <p class="popup__link">Выполнить вход</p>
+          </div>
+        </div>
+      </template>
 
     </main>
 
@@ -237,6 +227,7 @@
         </a>
       </div>
     </footer>
+    <div class="overlay"></div>
 
   </div>
 

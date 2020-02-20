@@ -1,4 +1,5 @@
 .popup__link {
   color: #2f71e5;
   text-decoration: none;
+  cursor: pointer;
 }

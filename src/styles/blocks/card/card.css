@@ -10,23 +10,35 @@
 
 .card {
   max-width: 400px;
+  height: 576px;
   padding-bottom: 64px;
   display: block;
   position: relative;
   background: #fff;
   border-radius: 10px;
   overflow: hidden;
+  cursor: pointer;
+  transition: all .2s ease-in;
 }
 
-/* @media screen and (max-width: 900px) {
-  .card-list__container {
-    margin-top: 32px;
-    grid-template-columns: 1fr 1fr;
+.card:hover {
+  box-shadow: 0 0 25px #ccc;
+}
+
+.card__bookmark:hover ~ .card__hint_invisible {
+  visibility: visible;
+}
+
+@media screen and (max-width: 900px) {
+  .card {
+   justify-self: center;
+   height: 420px;
   }
-} */
+}
 
 @media screen and (max-width: 600px) {
   .card {
    justify-self: center;
+   height: 440px;
   }
 }

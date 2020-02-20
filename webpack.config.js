@@ -9,9 +9,9 @@ const isDev = process.env.NODE_ENV === 'development';
 
 module.exports = {
   entry: {
-    main: './src/scripts/index.js',
-    about: './src/scripts/about.js',
-    saved: './src/scripts/saved.js',
+    main: './src/index.js',
+    about: './src/about/about.js',
+    saved: './src/saved-articles/saved-articles.js',
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
@@ -80,7 +80,7 @@ module.exports = {
       {
         inject: false,
         // hash: true,
-        template: './src/saved.html',
+        template: './src/saved-articles/saved.html',
         filename: 'saved.html',
         // chunks: ['saved'],
       },
@@ -89,7 +89,7 @@ module.exports = {
       {
         inject: false,
         // hash: true,
-        template: './src/about.html',
+        template: './src/about/about.html',
         filename: 'about.html',
         // chunks: ['main'],
       },

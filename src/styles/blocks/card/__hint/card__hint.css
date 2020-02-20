@@ -12,3 +12,18 @@
   padding: 14px 12px;
   background-color: #fff;
 }
+
+
+/* @media screen and (max-width: 900px) {
+  .card {
+   justify-self: center;
+   height: 420px;
+  }
+} */
+
+@media screen and (max-width: 600px) {
+  .card__hint {
+    top: 70px;
+    right: 24px;
+  }
+}

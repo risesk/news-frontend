@@ -1,11 +1,13 @@
-.header_background-color_dark .menu__overlay {
+@import url('./_is_opened/overlay_is_opened.css');
+
+.overlay {
   position: fixed;
   z-index: 1;
   bottom: 0;
   left: 0;
-  display: block;
+  display: none;
 
   width: 100%;
-  height: 90%;
+  height: 100%;
   background-color:rgba(0,0,0,.5);
 }
