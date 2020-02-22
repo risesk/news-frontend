@@ -12,7 +12,7 @@ let isLoggedIn = false;
 let cardsArray = [];
 let userLogin = '';
 
-const cardTemplate = document.getElementById('news-card-template').content.querySelector('.card');
+const cardTemplate = document.querySelector('#news-card-template').content.querySelector('.card');
 const rootElement = document.querySelector('.page');
 const overlay = document.querySelector('.overlay');
 
