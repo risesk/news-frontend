@@ -76,10 +76,12 @@ authPopup.setSubmitCallback((info) => mainApi.signin(info), () => {}, checkCurre
 header.setCallbacks(() => authPopup.open(), logoutCallback);
 
 function searchArticles() {
+  const currentDate = getCurrentDate();
+  const weekBeforeCurrentDate = getWeekBeforeDate();
   newsCardList.renderLoader();
   newsApi.getNews(searchInput.value,
-    getCurrentDate,
-    getWeekBeforeDate,
+    currentDate,
+    weekBeforeCurrentDate,
     newsApiData.NUMBER_OF_ARTICLES)
     .then((result) => {
       if (result.articles.length === 0) {
@@ -87,7 +89,6 @@ function searchArticles() {
       }
       cardsArray = result.articles;
       newsCardList.setNewsCards(cardsArray, isLoggedIn, searchInput.value);
-      searchInput.value = '';
       return result;
     })
     .catch((err) => newsCardList.renderError(err));

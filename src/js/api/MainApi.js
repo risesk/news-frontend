@@ -46,8 +46,7 @@ export default class MainApi {
     return fetch(`${this._baseUrl}/logout`, {
       method: 'POST',
       credentials: 'include',
-    })
-      .catch((err) => new Error(err.message));
+    });
   }
 
   getUserData() {
@@ -96,13 +95,3 @@ export default class MainApi {
       .then((res) => this._getResponseData(res));
   }
 }
-
-// export default class MainApi {
-//   constructor(apiLinks) {
-//     this._apiLinks = apiLinks;
-//     this.getUserData = this.getUserData.bind(this);
-//     this.logout = this.logout.bind(this);
-//     this.createArticle = this.createArticle.bind(this);
-//     this.removeArticle = this.removeArticle.bind(this);
-//     this.getArticles = this.getArticles.bind(this);
-//   }
