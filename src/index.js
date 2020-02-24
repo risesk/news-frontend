@@ -75,10 +75,18 @@ regPopup.setSubmitCallback((info) => mainApi.signup(info), () => successPopup.op
 authPopup.setSubmitCallback((info) => mainApi.signin(info), () => {}, checkCurrentAuthStatus);
 header.setCallbacks(() => authPopup.open(), logoutCallback);
 
+const searchSection = new SearchSection({
+  input: searchInput,
+  btnSubmit: searchButton,
+  error: searchErrorElement,
+  selector: '.search',
+});
+
 function searchArticles(e) {
   e.preventDefault();
   const currentDate = getCurrentDate();
   const weekBeforeCurrentDate = getWeekBeforeDate();
+  searchSection.render(true);
   newsCardList.renderLoader();
   newsApi.getNews(searchInput.value,
     currentDate,
@@ -92,22 +100,18 @@ function searchArticles(e) {
       newsCardList.setNewsCards(cardsArray, isLoggedIn, searchInput.value);
       return result;
     })
-    .catch((err) => newsCardList.renderError(err));
+    .catch((err) => newsCardList.renderError(err))
+    .finally(() => searchSection.render(false));
 }
 
-// eslint-disable-next-line no-unused-vars
-const searchSection = new SearchSection({
-  input: searchInput,
-  btnSubmit: searchButton,
-  error: searchErrorElement,
-  selector: '.search',
-  handlers: [
+searchSection.setHandler(
+  [
     {
       selector: '.search__button',
       eventType: 'click',
       callback: (e) => searchArticles(e),
     },
   ],
-});
+);
 
 checkCurrentAuthStatus();

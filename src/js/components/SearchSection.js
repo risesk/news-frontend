@@ -14,6 +14,15 @@ class SearchSection extends BaseComponent {
     this._input.addEventListener('input', this._validInput.bind(this));
   }
 
+  render(isLoading) {
+    if (isLoading) this._deactivateBtnSubmit();
+    else this._activateBtnSubmit();
+  }
+
+  setHandler(handlers) {
+    this._setHandlers(handlers);
+  }
+
   _activateBtnSubmit() {
     this._btnSubmit.removeAttribute('disabled');
     this._btnSubmit.classList.remove('button_inactive');

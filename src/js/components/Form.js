@@ -29,7 +29,7 @@ class Form extends Popup {
     e.preventDefault();
     this._resetError(this._submitErrorElement);
     const formInfo = this._getInfo();
-
+    this.render(true);
     return this._submitCallback(formInfo)
       .then(() => {
         this.close();
@@ -37,13 +37,19 @@ class Form extends Popup {
         this._renderHeaderCallback();
       })
       .catch((err) => {
+        if (err.message) {
+          this._activateError(this._submitErrorElement);
+          this._submitErrorElement.textContent = ERROR_MESSAGES.NO_CONNECTION;
+          return;
+        }
         err.json()
           .then((res) => {
             this._activateError(this._submitErrorElement);
             this._submitErrorElement.textContent = `${res.message}`;
           })
           .catch((error) => console.log(error));
-      });
+      })
+      .finally(() => this.render(false));
   }
 
   _validateInputElement(inputElement) {
@@ -135,6 +141,11 @@ class Form extends Popup {
       info[input.name] = input.value;
       return info;
     }, {});
+  }
+
+  render(isLoading) {
+    if (!isLoading) this._deactivateButton();
+    else this._activateButton();
   }
 
   close() {

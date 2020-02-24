@@ -42,6 +42,7 @@ const ERROR_MESSAGES = {
   NOT_CONSISTENT_TEXT_FIELD: 'Должно быть от 2 до 20 символов',
   NOT_CONSISTENT_PASSWORD_FIELD: 'Должно быть от 6 до 20 символов',
   NOT_CONSISTENT_EMAIL_FIELD: 'Неправильный формат email',
+  NO_CONNECTION: 'Не удалось подключиться к серверу',
 };
 
 export {
