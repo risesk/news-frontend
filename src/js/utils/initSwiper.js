@@ -1,4 +1,3 @@
-// import '../../vendors/swiper/swiper.min';
 import Swiper from 'swiper';
 
 export default function initSwiper() {
