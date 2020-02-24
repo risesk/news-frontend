@@ -75,7 +75,8 @@ regPopup.setSubmitCallback((info) => mainApi.signup(info), () => successPopup.op
 authPopup.setSubmitCallback((info) => mainApi.signin(info), () => {}, checkCurrentAuthStatus);
 header.setCallbacks(() => authPopup.open(), logoutCallback);
 
-function searchArticles() {
+function searchArticles(e) {
+  e.preventDefault();
   const currentDate = getCurrentDate();
   const weekBeforeCurrentDate = getWeekBeforeDate();
   newsCardList.renderLoader();
@@ -104,7 +105,7 @@ const searchSection = new SearchSection({
     {
       selector: '.search__button',
       eventType: 'click',
-      callback: () => searchArticles(),
+      callback: (e) => searchArticles(e),
     },
   ],
 });
