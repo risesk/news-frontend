@@ -18,9 +18,9 @@ let cardsArray = [];
 
 const cardTemplate = document.querySelector('#news-card-template').content.querySelector('.card');
 const rootElement = document.querySelector('.page');
-const searchForm = document.forms.searchNews;
-const searchInput = searchForm.elements['search-input'];
-const searchButton = searchForm.elements['search-button'];
+const searchForm = document.querySelector('.search__form');
+const searchInput = searchForm.querySelector('.search__input');
+const searchButton = searchForm.querySelector('.button');
 const searchErrorElement = searchForm.querySelector('.search__error');
 const overlay = document.querySelector('.overlay');
 
