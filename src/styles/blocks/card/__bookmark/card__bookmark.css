@@ -1,3 +1,6 @@
+@import url('./_hover_fill/card__bookmark_hover_fill.css');
+@import url('./_is-active/card__bookmark_is-active.css');
+
 .card__bookmark{
   position: absolute;
   top: 24px;
@@ -15,11 +18,5 @@
 
 .card__bookmark:hover path {
   stroke: #1A1B22;
-  transition: 0.2s ease-in;
-}
-
-.card__bookmark:focus path {
-  fill: #2F71E5;
-  stroke: none;
   transition: 0.2s ease-in;
 }

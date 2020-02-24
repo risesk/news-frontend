@@ -13,3 +13,8 @@
 @import url('../styles/blocks/error-message/error-message.css');
 @import url('../styles/blocks/input-container/input-container.css');
 @import url('../styles/blocks/footer/footer.css');
+@import url('../styles/blocks/overlay/overlay.css');
+
+.visually-hidden {
+  display: none;
+}

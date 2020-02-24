@@ -1,3 +1,5 @@
+@import url('./_visible/error-message_visible.css');
+
 .error-message {
     color: #FF3333;
     font-size: 12px;

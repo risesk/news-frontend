@@ -4,3 +4,8 @@
   border: 1px solid #000;
 }
 
+.button_color_transparent-black:hover {
+  box-shadow: 0 0 10px #ccc;
+}
+
+

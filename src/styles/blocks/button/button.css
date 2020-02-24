@@ -6,17 +6,18 @@
 @import url('./_color/_transparent/button_color_transparent.css');
 @import url('./_color/_white/button_color_white.css');
 @import url('./_color/_blue/button_color_blue.css');
-
+@import url('./__text/button__text.css');
 @import url('./_color/_transparent-black/button_color_tranparent-black.css');
-@import url('./__mobile/button__mobile.css');
-@import url('./_color/_black/button_color_black.css');
-@import url('./__exit/button__exit.css');
 @import url('./_invisible/button_invisible.css');
+@import url('./_inactive/button_inactive.css');
 
 .button {
-    border-radius: 100px;
-    cursor: pointer;
-    box-sizing: border-box;
-    outline: none;
-    transition: .2s ease-in;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100px;
+  cursor: pointer;
+  box-sizing: border-box;
+  outline: none;
+  transition: .2s ease-in;
 }

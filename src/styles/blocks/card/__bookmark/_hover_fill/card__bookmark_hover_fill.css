@@ -1,0 +1,4 @@
+.card__bookmark.card__bookmark_hover_fill:hover path {
+  fill: #1A1B22;
+  transition: 0.2s ease-in;
+}

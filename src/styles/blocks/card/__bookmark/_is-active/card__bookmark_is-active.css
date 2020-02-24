@@ -1,0 +1,5 @@
+.card__bookmark_is-active path {
+  fill: #2F71E5;
+  stroke: none;
+  transition: 0.2s ease-in;
+}

@@ -1,0 +1,5 @@
+.header__mobile-button.header__mobile-button_color_black::after,
+.header__mobile-button.header__mobile-button_color_black::before {
+  color: #000;
+  background-color: #000;
+}

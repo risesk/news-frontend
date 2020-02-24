@@ -1,3 +1,3 @@
 .card__hint_invisible {
-  display: none;
+  visibility: hidden;
 }

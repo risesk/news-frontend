@@ -7,8 +7,10 @@
 @import url('./__menu/_active/header__menu_active.css');
 @import url('./__menu/_is-open/header__menu_is-open.css');
 @import url('./__menu-item/header__menu-item.css');
+@import url('./__mobile-button/header__mobile-button.css');
 
 .header {
   width: 100%;
   border-bottom: 1px solid #c4c4c4;
+  z-index: 2;
 }

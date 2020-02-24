@@ -2,7 +2,11 @@
 
 [![GitHub tag (latest by date)](https://img.shields.io/github/v/tag/risesk/news-frontend?label=version)](https://github.com/risesk/news-frontend/releases/)
 #### Учебный проект
-Ссылка на проект https://risesk.github.io/news-frontend/
+Ссылка на проект https://mestoapp.site
+https://risesk.github.io/news-frontend/
+                
+
+Репозиторий бэкенда:  https://github.com/risesk/news-api
 
 Сервис NewsExplorer позволяет искать наиболее популярные новости по ключевым словам.
 В проекте сверстаны следующие страницы:
