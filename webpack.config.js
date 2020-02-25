@@ -70,28 +70,22 @@ module.exports = {
     new HtmlWebpackPlugin(
       {
         inject: false,
-        // hash: true,
         template: './src/index.html',
         filename: 'index.html',
-        // chunks: ['main'],
       },
     ),
     new HtmlWebpackPlugin(
       {
         inject: false,
-        // hash: true,
         template: './src/saved-articles/saved.html',
-        filename: 'saved.html',
-        // chunks: ['saved'],
+        filename: './saved/index.html',
       },
     ),
     new HtmlWebpackPlugin(
       {
         inject: false,
-        // hash: true,
         template: './src/about/about.html',
-        filename: 'about.html',
-        // chunks: ['main'],
+        filename: './about/index.html',
       },
     ),
     new WebpackMd5Hash(),

@@ -19,13 +19,13 @@
         <nav class="header__menu">
           <ul class="menu">
             <li class="menu__item header__menu-item">
-              <a href="./index.html" class="menu__link menu__link_header">Главная</a>
+              <a href="/" class="menu__link menu__link_header">Главная</a>
             </li>
             <li class="menu__item header__menu-item">
-              <a href="./about.html" class="menu__link header__menu_active">О проекте</a>
+              <a href="../about" class="menu__link header__menu_active">О проекте</a>
             </li>
             <li id="savedArticlesLink" class="menu__item header__menu-item">
-              <a href="./saved.html" class="menu__link menu__link_header">Сохраненные статьи</a>
+              <a href="../saved" class="menu__link menu__link_header">Сохраненные статьи</a>
             </li>
           </ul>
           <button id="authorization" class="button button_color_transparent-black button_size_s">Авторизоваться</button>
@@ -102,7 +102,8 @@
 
       <section class="about-author page__content">
         <picture>
-          <img src="<%=require('../images/AuthorPhoto.png')%>" alt="Фото автора" class="about-author__image">
+          <source media="(max-width: 400px)" srcset="<%= require('../images/AuthorPhoto_400.jpg') %>" />
+          <img src="<%=require('../images/AuthorPhoto.jpg')%>" alt="Фото автора" class="about-author__image">
         </picture>
         <div class="about-author__description">
           <h3 class="about-author__title">Об авторе</h3>
@@ -144,7 +145,7 @@
                                 14 августа, 2019
                             </time>
                             <div class="commit-card__author">
-                                    <img src="<%=require('../images/AuthorPhoto.png')%>" alt="AuthorPhoto" class="commit-card__avatar">
+                                    <img src="<%=require('../images/AuthorPhoto.jpg')%>" alt="AuthorPhoto" class="commit-card__avatar">
                                 <h3 class="commit-card__name">Инга Иванова</h3>
                                 <a href="mailto:ingaiva@yandex.ru" class="commit-card__mail">ingaiva@yandex.ru</a>
                             </div>
