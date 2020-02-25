@@ -7,8 +7,8 @@
   <meta name="author" content="Anton Kuvichka">
   <meta name="description" content="News search web-site">
   <title>News-explorer</title>
-  <link rel="stylesheet" href="styles/about.e53f436a6766934496b8.css">
-  <link rel="icon" href="./images/Favicon.png">
+  <link rel="stylesheet" href="../styles/about.3144c03de32e848f332d.css">
+  <link rel="icon" href="../images/Favicon.png">
 </head>
 <body>
   <div class="page">
@@ -19,13 +19,13 @@
         <nav class="header__menu">
           <ul class="menu">
             <li class="menu__item header__menu-item">
-              <a href="./index.html" class="menu__link menu__link_header">Главная</a>
+              <a href="../" class="menu__link menu__link_header">Главная</a>
             </li>
             <li class="menu__item header__menu-item">
-              <a href="./about.html" class="menu__link header__menu_active">О проекте</a>
+              <a href="/" class="menu__link header__menu_active">О проекте</a>
             </li>
             <li id="savedArticlesLink" class="menu__item header__menu-item">
-              <a href="./saved.html" class="menu__link menu__link_header">Сохраненные статьи</a>
+              <a href="../saved" class="menu__link menu__link_header">Сохраненные статьи</a>
             </li>
           </ul>
           <button id="authorization" class="button button_color_transparent-black button_size_s">Авторизоваться</button>
@@ -102,7 +102,8 @@
 
       <section class="about-author page__content">
         <picture>
-          <img src="./images/AuthorPhoto.png" alt="Фото автора" class="about-author__image">
+          <source media="(max-width: 400px)" srcset="../images/AuthorPhoto_400.jpg" />
+          <img src="../images/AuthorPhoto.jpg" alt="Фото автора" class="about-author__image">
         </picture>
         <div class="about-author__description">
           <h3 class="about-author__title">Об авторе</h3>
@@ -121,7 +122,7 @@
       </section>
       <section id="error-section" class="search-result visually-hidden">
         <div class="search-result__content page__content">
-          <img src="./images/not-found.svg" alt="Ошибка: ничего не найдено" class="search-result__image">
+          <img src="../images/not-found.svg" alt="Ошибка: ничего не найдено" class="search-result__image">
           <h3 class="search-result__title">Ничего не найдено</h3>
           <p class="search-result__text">К сожалению по вашему запросу
             ничего не найдено.</p>
@@ -144,7 +145,7 @@
                                 14 августа, 2019
                             </time>
                             <div class="commit-card__author">
-                                    <img src="./images/AuthorPhoto.png" alt="AuthorPhoto" class="commit-card__avatar">
+                                    <img src="../images/AuthorPhoto.jpg" alt="AuthorPhoto" class="commit-card__avatar">
                                 <h3 class="commit-card__name">Инга Иванова</h3>
                                 <a href="mailto:ingaiva@yandex.ru" class="commit-card__mail">ingaiva@yandex.ru</a>
                             </div>
@@ -168,7 +169,7 @@
       <template id="popup-auth">
         <div class = "popup">
           <div class="popup__content">
-            <img src="./images/close.svg" alt="" class="popup__close">
+            <img src="../images/close.svg" alt="" class="popup__close">
             <h3 class="popup__title">Вход</h3>
             <form class="popup__form" name="auth">
               <div class="input-container">
@@ -194,7 +195,7 @@
       <template id="popup-reg">
         <div class = "popup">
           <div class="popup__content">
-            <img src="./images/close.svg" alt="" class="popup__close">
+            <img src="../images/close.svg" alt="" class="popup__close">
             <h3 class="popup__title">Регистрация</h3>
             <form class="popup__form" name="reg">
               <div class="input-container">
@@ -225,7 +226,7 @@
       <template id="popup-signup-success">
         <div class = "popup">
           <div class="popup__content">
-            <img src="./images/close.svg" alt="" class="popup__close">
+            <img src="../images/close.svg" alt="" class="popup__close">
             <h3 class="popup__title">Пользователь успешно зарегистрирован!</h3>
             <p class="popup__link">Выполнить вход</p>
           </div>
@@ -270,6 +271,6 @@
 
   </div>
 
-  <script src="scripts/about.65d5b94e5a52af507b8f.js"></script>
+  <script src="../scripts/about.04edb91367e6482e7e10.js"></script>
 </body>
 </html>
