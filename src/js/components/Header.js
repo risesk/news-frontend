@@ -10,6 +10,8 @@ export default class Header extends BaseComponent {
     this._logOutButton = this.element.querySelector('#logout');
     this._savedArticlesLink = this.element.querySelector('#savedArticlesLink');
     this._colorSelector = color === 'light' ? 'header_color_white' : '';
+    this._openMobileNavbar = this._openMobileNavbar.bind(this);
+    this._closeMobileNavbar = this._closeMobileNavbar.bind(this);
     this._setListeners();
   }
 
@@ -49,9 +51,16 @@ export default class Header extends BaseComponent {
     this.element.classList.remove('header_background-color_dark');
     this._overlay.classList.remove('overlay_is_opened');
     this._mobileBtn.classList.remove('header__mobile-button_close');
+    if (!this._colorSelector) {
+      this._authButton.classList.remove('button_color_transparent');
+      this._authButton.classList.add('button_color_transparent-black');
+      this._logOutButton.classList.remove('button_color_transparent');
+      this._logOutButton.classList.add('button_color_transparent-black');
+      this._mobileBtn.classList.add('header__mobile-button_color_black');
+    }
 
     this._mobileBtn.removeEventListener('click', this._closeMobileNavbar);
-    this._mobileBtn.addEventListener('click', this._openMobileNavbar.bind(this));
+    this._mobileBtn.addEventListener('click', this._openMobileNavbar);
   }
 
   _openMobileNavbar() {
@@ -59,9 +68,16 @@ export default class Header extends BaseComponent {
     this.element.classList.add('header_background-color_dark');
     this._overlay.classList.add('overlay_is_opened');
     this._mobileBtn.classList.add('header__mobile-button_close');
+    if (!this._colorSelector) {
+      this._authButton.classList.add('button_color_transparent');
+      this._authButton.classList.remove('button_color_transparent-black');
+      this._logOutButton.classList.add('button_color_transparent');
+      this._logOutButton.classList.remove('button_color_transparent-black');
+      this._mobileBtn.classList.remove('header__mobile-button_color_black');
+    }
 
     this._mobileBtn.removeEventListener('click', this._openMobileNavbar);
-    this._mobileBtn.addEventListener('click', this._closeMobileNavbar.bind(this));
+    this._mobileBtn.addEventListener('click', this._closeMobileNavbar);
   }
 
   _setListeners() {

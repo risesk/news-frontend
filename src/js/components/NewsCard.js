@@ -4,10 +4,12 @@ import { getNewsCardDate } from '../utils/formatDate';
 class NewsCard extends BaseComponent {
   constructor(props) {
     super(props);
-    // this._cardContainerElement = this._element;
     this.cardElement = props.cardTemplate.cloneNode(true);
     this._isLoggedin = props.loginStatus;
     this._isLiked = false;
+    this._openCard = this._openCard.bind(this);
+    this._deleteCard = this._deleteCard.bind(this);
+    this._like = this._like.bind(this);
     this.createCard(props.data, props.keyword);
     this._renderHint(this._isLoggedin);
     this._setEventListeners();
@@ -45,12 +47,20 @@ class NewsCard extends BaseComponent {
   _setEventListeners() {
     const bokmarkBtn = this.cardElement.querySelector('#deleteButton');
     const cardBookmark = this.cardElement.querySelector('.card__bookmark');
-    this.cardElement.querySelector('.card__image').addEventListener('click', this._openCard.bind(this));
-    this.cardElement.querySelector('.card__content').addEventListener('click', this._openCard.bind(this));
+    this._addlistener({
+      element: this.cardElement.querySelector('.card__image'),
+      eventType: 'click',
+      callback: this._openCard,
+    });
+    this._addlistener({
+      element: this.cardElement.querySelector('.card__content'),
+      eventType: 'click',
+      callback: this._openCard,
+    });
     if (bokmarkBtn) {
-      bokmarkBtn.addEventListener('click', this._deleteCard.bind(this));
+      this._addlistener({ element: bokmarkBtn, eventType: 'click', callback: this._deleteCard });
     } else if (this._isLoggedin) {
-      cardBookmark.addEventListener('click', this._like.bind(this));
+      this._addlistener({ element: cardBookmark, eventType: 'click', callback: this._like });
     }
   }
 
@@ -114,6 +124,7 @@ class NewsCard extends BaseComponent {
     this._dependecies.mainApi.removeArticle(this._cardId)
       .then(() => {
         this.cardElement.remove();
+        this._clearListeners();
         if (this._dependecies.infoSection) this._dependecies.infoSection.render();
       })
       .catch((err) => {
